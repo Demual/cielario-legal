@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cielario · Datenschutzerklärung</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    color: #191c1e; background: #f6f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e9f2; background: #070b18; }
+    td, th { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; color: #9a6f00; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  @media (prefers-color-scheme: dark) { h2 { color: #f2c14e; } }
+  .fecha { opacity: .7; font-size: .9rem; }
+  .clave { border-left: 4px solid #f2c14e; padding: .5rem 0 .5rem 1rem; margin: 1.5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: rgba(127,127,127,.15); padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+<h1>Datenschutzerklärung</h1>
+<p class="fecha">App Cielario (<code>com.jrsoft.mapaestrellas</code>) · Letzte Aktualisierung: 7. Oktober 2026</p>
+
+<p class="clave"><strong>In einem Satz:</strong> Diese App hat keine Benutzerkonten und berechnet den Himmel auf Ihrem Smartphone. Das Gerät verlässt nur, was für die Wolkenvorhersage unbedingt nötig ist (die Koordinaten des Ortes, auf einen Kilometer gerundet, die unser Server nicht speichert), die Abfrage der Satellitenbahnen (für alle gleich, ohne Daten über Sie) und was die Werbung von Google benötigt.</p>
+
+<h2>Verantwortlicher</h2>
+<p>Verantwortlicher für die Verarbeitung ist JR Soft, der Handelsname von Javier Román Sáez, dem Entwickler der App. Sie erreichen ihn unter <a href="mailto:demual@gmail.com">demual@gmail.com</a>.</p>
+
+<h2>Was diese App NICHT tut</h2>
+<ul>
+  <li>Es gibt keine Registrierung, kein Konto, keinen Benutzernamen und kein Passwort. Sie werden nie nach einer E-Mail-Adresse, einer Telefonnummer oder einem Namen gefragt.</li>
+  <li>Es gibt kein eigenes Analysewerkzeug: weder Google Analytics noch Firebase Analytics noch Absturzberichte. Die Werbebibliothek von Google sendet allerdings ihre eigenen technischen Daten an Google; welche Daten und wozu, erfahren Sie weiter unten.</li>
+  <li>Daten werden weder verkauft noch vermietet noch zu kommerziellen Zwecken an Dritte weitergegeben.</li>
+  <li>Der genaue Standort wird nicht verwendet. Es wird nur der ungefähre Standort angefordert, und nur, wenn Sie „Meinen ungefähren Standort verwenden“ wählen. Die App fordert ihn nie im Hintergrund an. Wenn Sie ihn nicht freigeben, wird der Ort der Zeitzone des Smartphones verwendet.</li>
+  <li>Kamera und Mikrofon werden nicht verwendet. Die Lagesensoren (Kompass, Gyroskop, Beschleunigungssensor) werden auf dem Smartphone ausgelesen, um die Himmelskarte zu bewegen, und nirgendwohin gesendet.</li>
+  <li>Es gibt keine Benachrichtigungen, die von einem Server gesendet werden: Die Benachrichtigungen zu Meteorströmen und Finsternissen werden auf dem Smartphone berechnet und geplant.</li>
+</ul>
+
+<h2>Daten, die nur auf Ihrem Smartphone bleiben</h2>
+<p>Sie werden im privaten Speicher der App abgelegt und verschwinden, wenn Sie die App deinstallieren oder ihre Daten in den Android-Einstellungen löschen:</p>
+<ul>
+  <li>Der Ort, von dem aus Sie beobachten: seine auf zwei Dezimalstellen gerundeten Koordinaten (etwa ein Kilometer) und sein Name.</li>
+  <li>Ihre Einstellungen: Sprache, Ebenen der Himmelskarte, Nachtmodus, Benachrichtigungen, Ruhezeit, die von Ihnen gewählte Lichtverschmutzung und die Kompasskorrektur.</li>
+  <li>Eine zusammengefasste Kopie der letzten Wolkenvorhersage, damit sie nicht erneut abgerufen werden muss.</li>
+  <li>Die heruntergeladenen Satellitenbahnen, damit sie einige Stunden lang nicht erneut abgerufen werden müssen.</li>
+  <li>Die Nächte, die Sie mit dem Meteorzähler zählen (Zeiten, Ort, Bedingungen und jeder Meteor), bis Sie sie löschen.</li>
+  <li>Was das Widget auf dem Startbildschirm zeigt: die bereits berechneten Daten der nächsten Sternschnuppenströme und Finsternisse.</li>
+</ul>
+<p>Die Sternkataloge, die geschätzte Lichtverschmutzung und die Positionen der Planeten, des Mondes und der Meteorströme werden auf dem Smartphone mit Daten berechnet, die mit der App ausgeliefert werden.</p>
+
+<h2>Daten, die Ihr Smartphone verlassen</h2>
+<h3>Die Wolkenvorhersage</h3>
+<p>Die Wolken stammen vom Norwegischen Meteorologischen Institut (MET Norway), über unseren Zwischenserver bei Google Cloud Run (Region Madrid). Die App sendet ihm die auf zwei Nachkommastellen gerundeten Koordinaten des Ortes und eine App-Kennung; der Server rundet sie auf eine Nachkommastelle (etwa 11 km), ruft bei MET Norway die Vorhersage für dieses Gebiet ab und hält sie einige Stunden lang für alle in der Nähe im Speicher. So erhält MET Norway nur die Anfrage unseres Servers, nie Ihre IP-Adresse oder Ihren genauen Ort. Der Server speichert und protokolliert weder die Koordinaten noch die IP-Adressen der Anfragen (auch nicht in den Protokollen von Google Cloud, die für diesen Dienst abgeschaltet sind). Wenn Sie die Benachrichtigungen eingeschaltet haben, ruft die App die Vorhersage auch im Hintergrund ab, etwa zweimal am Tag, damit sie Sie nur dann benachrichtigt, wenn sich die Nacht lohnt.</p>
+<h3>Die Satellitenbahnen</h3>
+<p>Um die Raumstation und andere Satelliten zu zeichnen, lädt die App deren Bahnelemente von unserem Zwischenserver herunter, der sie von CelesTrak (celestrak.org) lädt und weitergibt. Die Anfrage ist für alle gleich: Sie gibt nur an, welche Satellitengruppe gewünscht wird, ohne Ihren Ort oder Daten über Sie. Sie erfolgt höchstens alle paar Stunden, nur bei geöffneter App, und lässt sich unter Mehr → Satelliten abschalten. Positionen und Überflüge werden im Telefon berechnet.</p>
+<h3>Ortsname und Städtesuche</h3>
+<p>Wenn Sie Ihren Standort verwenden, fragt die App Android selbst nach dem Namen des Ortes, der zu diesen Koordinaten gehört, und die Städtesuche sendet den von Ihnen eingegebenen Text an Android. Auf den meisten Smartphones wird dieser Dienst (der Geocoder von Android) von Google bereitgestellt, das diese Anfragen gemäß seiner Datenschutzerklärung verarbeitet.</p>
+<h3>Was Sie selbst teilen</h3>
+<p>Wenn Sie auf „Für die IMO exportieren“ tippen, erstellt die App einen Text mit dieser Zählung (Daten, Koordinaten des Ortes und Meteore) und öffnet das Teilen-Menü von Android: Er verlässt das Telefon nur, wenn Sie eine App wählen und ihn senden. Die Schaltflächen, um einen Ort auf der Karte zu sehen, öffnen Google Maps mit seinen Koordinaten; ab dann gelten die Bedingungen von Google Maps.</p>
+<h3>Die Beschreibungen aus Wikipedia</h3>
+<p>Die Beschreibungen der Sterne, Planeten und anderen Objekte sind in der App enthalten (Text aus Wikipedia, bearbeitet, unter der Lizenz CC BY-SA 4.0): Beim Lesen wird nichts gesendet. Nur wenn Sie auf „Mehr bei Wikipedia“ tippen, öffnet sich der Artikel in Ihrem Browser; ab dann erhält Wikipedia (Wikimedia Foundation) Ihre IP-Adresse, wie jede Website, die Sie besuchen, und es gilt deren Datenschutzerklärung.</p>
+<h3>IP-Adresse</h3>
+<p>Wie bei jeder App, die sich mit dem Internet verbindet, erhalten die Server, mit denen sie kommuniziert, Ihre IP-Adresse: unser Zwischenserver (Wolken und Satelliten), der sie nicht speichert, und Google (Ortsnamen, Werbung und, falls eingerichtet, die Fernkonfiguration). Google kann sie nutzen, um einen ungefähren Standort auf Stadt- oder Regionsebene zu schätzen, um Anzeigen auszuwählen und zu messen und Betrug zu verhindern.</p>
+<h3>Werbung: Google AdMob</h3>
+<p>Die App enthält das Werbe-SDK von Google (AdMob) und deklariert daher die Berechtigung <code>com.google.android.gms.permission.AD_ID</code>, die Zugriff auf die Werbe-ID von Android gewährt. Sie können diese ID unter Android-Einstellungen → Google → Anzeigen zurücksetzen oder löschen.</p>
+<p>Neben der Werbe-ID erfasst das AdMob-SDK die App-Set-ID, Interaktionen mit der App und mit den Anzeigen sowie Diagnosedaten (Startzeit, Abstürze und Energieverbrauch). Google verwendet diese Daten gemäß seiner eigenen Richtlinie, um Werbung auszuliefern und zu messen, für Statistiken und zur Betrugsprävention.</p>
+<p>Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz zeigt die App das Einwilligungsformular von Google (UMP) an, bevor personalisierte Werbung ausgeliefert wird. Sie können Ihre Entscheidung jederzeit unter Mehr → Datenschutzoptionen für Werbung ändern. Wenn Sie ablehnen, sehen Sie nicht personalisierte Werbung, und die App funktioniert genau gleich. Werbeanfragen enthalten weder Ihren Ort noch irgendetwas von dem, was Sie sich am Himmel ansehen. Bei eingeschaltetem rotem Nachtmodus wird keinerlei Werbung angefordert.</p>
+
+<h2>Beteiligte Dritte</h2>
+<table>
+  <tr><th>Dienst</th><th>Zweck</th><th>Datenschutzerklärung</th></tr>
+  <tr><td>MET Norway</td><td>Wolkenvorhersage (über unseren Server)</td><td><a href="https://www.met.no/en/About-us/privacy">met.no/en/About-us/privacy</a></td></tr>
+  <tr><td>CelesTrak</td><td>Satellitenbahnen (über unseren Server)</td><td><a href="https://celestrak.org">celestrak.org</a></td></tr>
+  <tr><td>Google Cloud Run</td><td>Unser Zwischenserver für Wolken und Satelliten (Region Madrid)</td><td><a href="https://cloud.google.com/terms/cloud-privacy-notice">cloud.google.com/terms/cloud-privacy-notice</a></td></tr>
+  <tr><td>Google (Android-Geocoder)</td><td>Ortsnamen und Städtesuche</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  <tr><td>Google AdMob</td><td>Werbung und Einwilligungsformular</td><td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td></tr>
+  <tr><td>Google Firebase Remote Config</td><td>Anpassen der Werbeplätze, ohne eine neue Version zu veröffentlichen (optional)</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+  <tr><td>Wikipedia (Wikimedia Foundation)</td><td>Der vollständige Artikel, nur wenn Sie ihn öffnen</td><td><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></td></tr>
+</table>
+<p>Die Wolkenvorhersage stammt von MET Norway und wird unter der Lizenz CC BY 4.0 veröffentlicht. Diese App ist nicht mit MET Norway verbunden.</p>
+
+<h2>Rechtsgrundlage und Speicherdauer</h2>
+<p>Der Standort wird verwendet, um den von Ihnen gewünschten Dienst zu erbringen (der Himmel und die Vorhersagen für Ihren Ort), und nur, wenn Sie ihn verwenden möchten. Für personalisierte Werbung ist die Rechtsgrundlage Ihre Einwilligung, die über das Formular von Google (UMP) eingeholt wird und jederzeit in der App widerrufen werden kann. Nicht personalisierte Werbung (wenn Sie keine Einwilligung geben oder sie widerrufen), ihre Messung und die Betrugsprävention beruhen auf dem berechtigten Interesse des Verantwortlichen, eine kostenlose App durch Werbung zu finanzieren (Art. 6 Abs. 1 lit. f DSGVO); Sie können unter Mehr → Datenschutzoptionen für Werbung widersprechen.</p>
+<p>Wie lange was gespeichert wird:</p>
+<ul>
+  <li><strong>Auf Ihrem Telefon:</strong> was die App speichert, bis Sie sie deinstallieren oder ihre Daten löschen. Die Nächte des Zählers, bis Sie sie löschen (höchstens die letzten 100 werden aufbewahrt).</li>
+  <li><strong>Unser Zwischenserver:</strong> die Vorhersage für jedes 11-km-Gebiet im Speicher, bis sie abläuft (einige Stunden), und die Satellitenbahnen etwa 3 Stunden. Er speichert keine Koordinaten und keine IP-Adressen. Er protokolliert nur seine eigenen Fehler bei der Verbindung mit MET Norway oder CelesTrak, ohne personenbezogene Daten, 30 Tage lang.</li>
+  <li><strong>Google</strong> (Werbung und Ortsnamen): nach eigenen Fristen, erklärt unter <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
+</ul>
+
+<h2>Internationale Datenübermittlungen</h2>
+<p>Google LLC mit Sitz in den USA kann dort Werbedaten (AdMob) und Daten zu Ortsnamen (Android-Geocoder) verarbeiten. Google LLC ist nach dem EU-US-Datenschutzrahmen (EU-U.S. Data Privacy Framework) zertifiziert, den die Europäische Kommission am 10. Juli 2023 als angemessen anerkannt hat, und verwendet zusätzlich Standardvertragsklauseln. Unser Zwischenserver läuft in der Google-Cloud-Region Madrid. Wenn Sie einen Wikipedia-Artikel öffnen, verbindet sich Ihr Browser mit der Wikimedia Foundation, ebenfalls in den USA.</p>
+
+<h2>Ihre Rechte</h2>
+<p>Wenn Sie in der Europäischen Union wohnen, haben Sie nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Da diese App außerhalb Ihres Smartphones keine Daten speichert, die mit Ihrer Person verknüpft sind, gilt:</p>
+<ul>
+  <li><strong>Löschung:</strong> Wenn Sie die App deinstallieren oder ihre Daten in den Android-Einstellungen löschen, wird alles entfernt, was sie speichert. Die Standortberechtigung können Sie in den Android-Einstellungen widerrufen. Die Werbe-ID setzen Sie unter Android-Einstellungen → Google → Anzeigen zurück oder löschen sie dort.</li>
+  <li><strong>Widerspruch und Widerruf der Einwilligung:</strong> Mehr → Datenschutzoptionen für Werbung.</li>
+  <li><strong>Auskunft:</strong> Was die App speichert, sehen Sie in der App selbst. Sie können an die Kontaktadresse schreiben; da es jedoch keine Konten gibt, hat der Verantwortliche außerhalb Ihres Smartphones keine Daten von Ihnen, die er auffinden könnte. Für Daten, die Google verarbeitet, wenden Sie sich an Google.</li>
+</ul>
+<p>Sie können sich außerdem bei der Aufsichtsbehörde Ihres Landes beschweren. In Spanien ist dies die <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+
+<h2>Kinder</h2>
+<p>Diese App richtet sich nicht an Kinder unter 13 Jahren und erhebt nicht wissentlich Daten von ihnen.</p>
+
+<h2>Änderungen dieser Datenschutzerklärung</h2>
+<p>Wenn sich diese Datenschutzerklärung wesentlich ändert, wird die neue Fassung unter derselben Adresse mit einem anderen Aktualisierungsdatum veröffentlicht. Sollten diese Übersetzung und das spanische Original voneinander abweichen, ist die spanische Fassung maßgeblich.</p>
+
+<footer>JR Soft · <a href="mailto:demual@gmail.com">demual@gmail.com</a></footer>
+</body>
+</html>

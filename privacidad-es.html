@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cielario · Política de privacidad</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    color: #191c1e; background: #f6f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e9f2; background: #070b18; }
+    td, th { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; color: #9a6f00; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  @media (prefers-color-scheme: dark) { h2 { color: #f2c14e; } }
+  .fecha { opacity: .7; font-size: .9rem; }
+  .clave { border-left: 4px solid #f2c14e; padding: .5rem 0 .5rem 1rem; margin: 1.5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: rgba(127,127,127,.15); padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+<h1>Política de privacidad</h1>
+<p class="fecha">Aplicación Cielario (<code>com.jrsoft.mapaestrellas</code>) · Última actualización: 7 de octubre de 2026</p>
+
+<p class="clave"><strong>En una frase:</strong> esta aplicación no tiene cuentas de usuario y calcula el cielo dentro de tu teléfono. Solo sale de él lo imprescindible para la previsión de nubes (las coordenadas del lugar redondeadas a un kilómetro, que nuestro servidor no guarda), la petición de las órbitas de los satélites (la misma para todos, sin datos tuyos) y lo que necesita la publicidad de Google.</p>
+
+<h2>Quién es el responsable</h2>
+<p>El responsable del tratamiento es JR Soft, nombre comercial de Javier Román Sáez, desarrollador de la aplicación. Puedes contactar en <a href="mailto:demual@gmail.com">demual@gmail.com</a>.</p>
+
+<h2>Lo que esta aplicación NO hace</h2>
+<ul>
+  <li>No hay registro, cuenta, usuario ni contraseña. Nunca se te pide un correo, un teléfono ni un nombre.</li>
+  <li>No hay ninguna herramienta de analítica propia: ni Google Analytics, ni Firebase Analytics, ni informes de fallos. La biblioteca de publicidad de Google sí envía a Google sus propios datos técnicos; qué datos y para qué, más abajo.</li>
+  <li>No se venden, alquilan ni ceden datos a terceros con fines comerciales.</li>
+  <li>No se usa la ubicación precisa. Solo se pide la aproximada, y solo si eliges «Usar mi ubicación». La aplicación nunca la pide en segundo plano. Si no la das, se usa el lugar de la zona horaria del teléfono.</li>
+  <li>No se usa la cámara ni el micrófono. Los sensores de orientación (brújula, giroscopio, acelerómetro) se leen dentro del teléfono para mover el mapa del cielo y no se envían a ningún sitio.</li>
+  <li>No hay notificaciones enviadas desde un servidor: los avisos de lluvias de estrellas y de eclipses se calculan y se programan dentro del teléfono.</li>
+</ul>
+
+<h2>Datos que se quedan solo en tu teléfono</h2>
+<p>Se guardan en el almacenamiento privado de la aplicación y desaparecen si la desinstalas o borras sus datos desde los ajustes de Android:</p>
+<ul>
+  <li>El lugar desde el que miras: sus coordenadas redondeadas a dos decimales (alrededor de un kilómetro) y su nombre.</li>
+  <li>Tus ajustes: idioma, capas del cielo, modo nocturno, avisos, horario de silencio, contaminación lumínica elegida y la corrección de la brújula.</li>
+  <li>Una copia resumida de la última previsión de nubes, para no volver a pedirla.</li>
+  <li>Las órbitas de los satélites descargadas, para no volver a pedirlas en unas horas.</li>
+  <li>Las noches que cuentas con el contador de meteoros (horas, lugar, condiciones y cada meteoro), hasta que las borras.</li>
+  <li>Lo que muestra el widget de la pantalla de inicio: las fechas de las próximas lluvias de estrellas y eclipses, ya calculadas.</li>
+</ul>
+<p>Los catálogos de estrellas, la contaminación lumínica estimada y las posiciones de planetas, la Luna y las lluvias de estrellas se calculan dentro del teléfono con datos que vienen con la aplicación.</p>
+
+<h2>Datos que sí salen del teléfono</h2>
+<h3>La previsión de nubes</h3>
+<p>Las nubes las da el Instituto Meteorológico de Noruega (MET Norway), a través de nuestro servidor intermedio en Google Cloud Run (región de Madrid). La aplicación le envía las coordenadas del lugar redondeadas a dos decimales y un identificador de la aplicación; el servidor las redondea a un decimal (unos 11 km), pide a MET Norway la previsión de esa zona y la guarda en memoria unas horas para todos los que estén cerca. Así, MET Norway solo recibe la petición de nuestro servidor, nunca tu dirección IP ni tu lugar exacto. El servidor no guarda ni registra las coordenadas ni las direcciones IP de las peticiones (tampoco en los registros de Google Cloud, desactivados para este servicio). Si tienes los avisos encendidos, la aplicación también pide la previsión en segundo plano, unas dos veces al día, para avisarte solo cuando la noche merezca la pena.</p>
+<h3>Las órbitas de los satélites</h3>
+<p>Para dibujar la Estación Espacial y otros satélites, la aplicación descarga sus elementos orbitales de nuestro servidor intermedio, que los descarga de CelesTrak (celestrak.org) y los reparte. La petición es la misma para todo el mundo: solo indica qué grupo de satélites se quiere, sin el lugar ni ningún dato tuyo. Se hace como mucho cada pocas horas, solo con la aplicación abierta, y se puede desactivar en Más → Satélites. Las posiciones y los pasos se calculan dentro del teléfono.</p>
+<h3>El nombre del lugar y el buscador de ciudades</h3>
+<p>Cuando usas tu ubicación, la aplicación pregunta al propio Android el nombre del sitio que corresponde a esas coordenadas, y el buscador de ciudades envía a Android el texto que escribes. En la mayoría de los teléfonos ese servicio (el geocodificador de Android) lo presta Google, que lo trata según su política de privacidad.</p>
+<h3>Lo que compartes tú</h3>
+<p>Al pulsar «Exportar para la IMO», la aplicación prepara un texto con ese conteo (fechas, coordenadas del lugar y meteoros) y abre el menú de compartir de Android: solo sale del teléfono si eliges una aplicación y lo envías. Los botones para ver un sitio en el mapa abren Google Maps con sus coordenadas; desde ese momento rigen las condiciones de Google Maps.</p>
+<h3>Las descripciones de Wikipedia</h3>
+<p>Las descripciones de las estrellas, los planetas y los demás objetos vienen dentro de la aplicación (texto adaptado de Wikipedia, con licencia CC BY-SA 4.0): leerlas no envía nada. Solo si pulsas «Más en Wikipedia» se abre el artículo en tu navegador; desde ese momento, Wikipedia (Fundación Wikimedia) recibe tu dirección IP, como cualquier web que visitas, y rige su política de privacidad.</p>
+<h3>Dirección IP</h3>
+<p>Como en cualquier aplicación que se conecta a internet, los servidores con los que habla reciben tu dirección IP: nuestro servidor intermedio (las nubes y los satélites), que no la guarda, y Google (el nombre de los lugares, la publicidad y, si está configurada, la configuración remota). Google puede usarla para estimar una ubicación aproximada, del orden de una ciudad o una región, con la que elegir y medir los anuncios y prevenir fraudes.</p>
+<h3>Publicidad: Google AdMob</h3>
+<p>La aplicación incluye el SDK de publicidad de Google (AdMob) y, por tanto, declara el permiso <code>com.google.android.gms.permission.AD_ID</code>, que da acceso al identificador de publicidad de Android. Este identificador se puede reiniciar o borrar desde Ajustes de Android → Google → Anuncios.</p>
+<p>Además del identificador de publicidad, el SDK de AdMob recoge el identificador del conjunto de aplicaciones (app set ID), las interacciones con la aplicación y con los anuncios y datos de diagnóstico (tiempo de arranque, bloqueos y consumo de energía). Google los usa para servir y medir la publicidad, para estadísticas y para prevenir fraudes, según su propia política.</p>
+<p>En el Espacio Económico Europeo, el Reino Unido y Suiza, la aplicación muestra el formulario de consentimiento de Google (UMP) antes de servir publicidad personalizada. Puedes cambiar tu elección cuando quieras desde Más → Opciones de privacidad de los anuncios. Si la rechazas, verás publicidad no personalizada y la aplicación funcionará exactamente igual. Las peticiones de anuncios no llevan tu lugar ni nada de lo que miras en el cielo. Con el modo nocturno rojo encendido no se pide ningún anuncio.</p>
+
+<h2>Terceros implicados</h2>
+<table>
+  <tr><th>Servicio</th><th>Para qué</th><th>Su política</th></tr>
+  <tr><td>MET Norway</td><td>Previsión de nubes (a través de nuestro servidor)</td><td><a href="https://www.met.no/en/About-us/privacy">met.no/en/About-us/privacy</a></td></tr>
+  <tr><td>CelesTrak</td><td>Órbitas de los satélites (a través de nuestro servidor)</td><td><a href="https://celestrak.org">celestrak.org</a></td></tr>
+  <tr><td>Google Cloud Run</td><td>Nuestro servidor intermedio de las nubes y los satélites (región de Madrid)</td><td><a href="https://cloud.google.com/terms/cloud-privacy-notice">cloud.google.com/terms/cloud-privacy-notice</a></td></tr>
+  <tr><td>Google (geocodificador de Android)</td><td>El nombre de los lugares y el buscador de ciudades</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  <tr><td>Google AdMob</td><td>Publicidad y formulario de consentimiento</td><td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td></tr>
+  <tr><td>Google Firebase Remote Config</td><td>Ajustar los huecos de publicidad sin publicar una versión nueva (opcional)</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+  <tr><td>Wikipedia (Fundación Wikimedia)</td><td>El artículo completo, solo si lo abres</td><td><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></td></tr>
+</table>
+<p>La previsión de nubes es de MET Norway y se publica con licencia CC BY 4.0. Esta aplicación no está afiliada a MET Norway.</p>
+
+<h2>Base legal y conservación</h2>
+<p>La ubicación se usa para prestarte el servicio que pides (el cielo y las previsiones de tu sitio), y solo si eliges usarla. En el caso de la publicidad personalizada, la base legal es tu consentimiento, recogido mediante el formulario de Google (UMP) y revocable en cualquier momento desde la aplicación. La publicidad no personalizada (si no das el consentimiento o lo retiras), su medición y la prevención de fraudes se basan en el interés legítimo del responsable en financiar con publicidad una aplicación gratuita (artículo 6.1.f del RGPD); puedes oponerte desde Más → Opciones de privacidad de los anuncios.</p>
+<p>Cuánto se conserva cada cosa:</p>
+<ul>
+  <li><strong>En tu teléfono:</strong> lo que guarda la aplicación, hasta que la desinstales o borres sus datos. Las noches del contador, hasta que las borres (se guardan como mucho las 100 últimas).</li>
+  <li><strong>Nuestro servidor intermedio:</strong> la previsión de cada zona de 11 km, en memoria, hasta que caduca (unas horas), y las órbitas, unas 3 horas. No guarda coordenadas ni direcciones IP. Solo registra sus propios errores al hablar con MET Norway o CelesTrak, sin datos de nadie, durante 30 días.</li>
+  <li><strong>Google</strong> (publicidad y nombre de los lugares): según sus propios plazos, explicados en <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
+</ul>
+
+<h2>Transferencias internacionales</h2>
+<p>Google LLC, con sede en Estados Unidos, puede tratar allí los datos de la publicidad (AdMob) y del nombre de los lugares (el geocodificador de Android). Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU. (EU-U.S. Data Privacy Framework), que la Comisión Europea declaró adecuado el 10 de julio de 2023, y usa además cláusulas contractuales tipo. Nuestro servidor intermedio funciona en la región de Madrid de Google Cloud. Si abres un artículo de Wikipedia, tu navegador se conecta con la Fundación Wikimedia, también en Estados Unidos.</p>
+
+<h2>Tus derechos</h2>
+<p>Si resides en la Unión Europea, el RGPD te reconoce los derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición. Como esta aplicación no guarda ningún dato asociado a tu persona fuera de tu teléfono:</p>
+<ul>
+  <li><strong>Supresión:</strong> desinstalar la aplicación, o borrar sus datos desde los ajustes de Android, elimina todo lo que guarda. Puedes retirar el permiso de ubicación desde los ajustes de Android. El identificador de publicidad se reinicia o se borra desde Ajustes de Android → Google → Anuncios.</li>
+  <li><strong>Oposición y retirada del consentimiento:</strong> Más → Opciones de privacidad de los anuncios.</li>
+  <li><strong>Acceso:</strong> lo que guarda la aplicación se ve en la propia app. Puedes escribir a la dirección de contacto, pero, al no existir cuentas, el responsable no tiene ningún dato tuyo que localizar fuera de tu teléfono. Los datos que trata Google se gestionan ante Google.</li>
+</ul>
+<p>También puedes reclamar ante la autoridad de control de tu país. En España es la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+
+<h2>Menores</h2>
+<p>Esta aplicación no está dirigida a menores de 13 años y no recoge conscientemente datos de ellos.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia de forma sustancial, se publicará la versión nueva en esta misma dirección con una fecha de actualización distinta.</p>
+
+<footer>JR Soft · <a href="mailto:demual@gmail.com">demual@gmail.com</a></footer>
+</body>
+</html>
