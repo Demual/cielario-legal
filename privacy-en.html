@@ -48,7 +48,7 @@
 </ul>
 
 <h2>Data that stays only on your phone</h2>
-<p>Stored in the app's private storage and deleted if you uninstall it or clear its data from Android settings:</p>
+<p>Stored in the app's private storage (except the SIM country, which isn't even stored) and deleted if you uninstall it or clear its data from Android settings:</p>
 <ul>
   <li>The place you watch from: its coordinates rounded to two decimals (about one kilometre) and its name.</li>
   <li>Your settings: language, sky layers, night mode, alerts, quiet hours, chosen light pollution level and the compass correction.</li>
@@ -78,6 +78,7 @@
 <p>The app includes Google's advertising SDK (AdMob) and therefore declares the <code>com.google.android.gms.permission.AD_ID</code> permission, which gives access to Android's advertising ID. You can reset or delete this ID in Android Settings → Google → Ads.</p>
 <p>Besides the advertising ID, the AdMob SDK collects the app set ID, interactions with the app and with ads, and diagnostic data (launch time, crashes and energy use). Google uses them to serve and measure ads, for analytics and to prevent fraud, under its own policy.</p>
 <p>In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's consent form (UMP) before serving personalised ads. You can change your choice at any time in More → Ad privacy options. If you decline, you'll see non-personalised ads and the app works exactly the same. Ad requests do not carry your location or anything you look at in the sky. With the red night mode on, no ads are requested at all.</p>
+<p>The ad consent message is shown by Google with wording shared by all its advertising partners, which is why it mentions precise geolocation. According to Google, its ads SDK only uses the approximate location inferred from the IP address, and this app does not pass it the GPS location. You can refuse that use under “Manage options”.</p>
 
 <h2>Third parties involved</h2>
 <table>
