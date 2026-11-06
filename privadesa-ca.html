@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Política de privadesa</h1>
-<p class="fecha">Aplicació Cielario (<code>com.jrsoft.mapaestrellas</code>) · Darrera actualització: 26 d'octubre de 2026</p>
+<p class="fecha">Aplicació Cielario (<code>com.jrsoft.mapaestrellas</code>) · Darrera actualització: 6 de novembre de 2026</p>
 
 <p class="clave"><strong>En una frase:</strong> aquesta aplicació no té comptes d'usuari i calcula el cel dins del teu telèfon. Només en surt l'imprescindible per a la previsió de núvols (les coordenades del lloc arrodonides a un quilòmetre, que el nostre servidor no guarda), la petició de les òrbites dels satèl·lits (la mateixa per a tothom, sense dades teves) i el que necessita la publicitat de Google.</p>
 
@@ -66,11 +66,11 @@
 
 <h2>Dades que sí que surten del telèfon</h2>
 <h3>La previsió de núvols</h3>
-<p>Els núvols els dona l'Institut Meteorològic de Noruega (MET Norway), a través del nostre servidor intermediari a Google Cloud Run (regió de Madrid). L'aplicació li envia les coordenades del lloc arrodonides a dos decimals i un identificador de l'aplicació; el servidor les arrodoneix a un decimal (uns 11 km), demana a MET Norway la previsió d'aquella zona i la guarda a la memòria unes hores per a tothom que sigui a prop. Així, MET Norway només rep la petició del nostre servidor, mai la teva adreça IP ni el teu lloc exacte. El servidor no guarda ni registra les coordenades ni les adreces IP de les peticions (tampoc als registres de Google Cloud, desactivats per a aquest servei). Si tens els avisos activats, l'aplicació també demana la previsió en segon pla, unes dues vegades al dia, per avisar-te només quan la nit valgui la pena.</p>
+<p>Els núvols els dona l'Institut Meteorològic de Noruega (MET Norway), a través del nostre servidor intermediari a Google Cloud Run (regió de Madrid). L'aplicació li envia les coordenades del lloc arrodonides a un decimal (uns 11 km) i un identificador de l'aplicació; el servidor demana a MET Norway la previsió d'aquella zona i la guarda a la memòria unes hores per a tothom que sigui a prop. Així, MET Norway només rep la petició del nostre servidor, mai la teva adreça IP ni el teu lloc exacte. El servidor no guarda ni registra les coordenades ni les adreces IP de les peticions (tampoc als registres de Google Cloud, desactivats per a aquest servei). Si tens els avisos activats, l'aplicació també demana la previsió en segon pla, unes dues vegades al dia, per avisar-te només quan la nit valgui la pena.</p>
 <h3>Les òrbites dels satèl·lits</h3>
 <p>Per dibuixar l'Estació Espacial i altres satèl·lits, l'aplicació baixa els seus elements orbitals del nostre servidor intermediari, que els baixa de CelesTrak (celestrak.org) i els reparteix. La petició és la mateixa per a tothom: només indica quin grup de satèl·lits es vol, sense el lloc ni cap dada teva. Es fa com a molt cada poques hores, només amb l'aplicació oberta, i es pot desactivar a Més → Satèl·lits. Les posicions i els passos es calculen dins del telèfon.</p>
 <h3>El nom del lloc i el cercador de ciutats</h3>
-<p>Quan fas servir la teva ubicació, l'aplicació pregunta al mateix Android el nom del lloc que correspon a aquestes coordenades, i el cercador de ciutats envia a Android el text que escrius. En la majoria de telèfons aquest servei (el geocodificador d'Android) el presta Google, que el tracta segons la seva política de privadesa.</p>
+<p>Quan fas servir la teva ubicació, l'aplicació pregunta al mateix Android el nom del lloc que correspon a aquestes coordenades, arrodonides també a un decimal (uns 11 km), i el cercador de ciutats envia a Android el text que escrius. En la majoria de telèfons aquest servei (el geocodificador d'Android) el presta Google, que el tracta segons la seva política de privadesa.</p>
 <h3>El que comparteixes tu</h3>
 <p>Quan prems «Exportar per a la IMO», l'aplicació prepara un text amb aquest recompte (dates, coordenades del lloc i meteors) i obre el menú de compartir d'Android: només surt del telèfon si tries una aplicació i l'envies. Els botons per veure un lloc al mapa obren Google Maps amb les seves coordenades; a partir d'aquell moment s'apliquen les condicions de Google Maps.</p>
 <h3>Les descripcions de la Viquipèdia</h3>

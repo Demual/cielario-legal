@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Política de privacidad</h1>
-<p class="fecha">Aplicación Cielario (<code>com.jrsoft.mapaestrellas</code>) · Última actualización: 26 de octubre de 2026</p>
+<p class="fecha">Aplicación Cielario (<code>com.jrsoft.mapaestrellas</code>) · Última actualización: 6 de noviembre de 2026</p>
 
 <p class="clave"><strong>En una frase:</strong> esta aplicación no tiene cuentas de usuario y calcula el cielo dentro de tu teléfono. Solo sale de él lo imprescindible para la previsión de nubes (las coordenadas del lugar redondeadas a un kilómetro, que nuestro servidor no guarda), la petición de las órbitas de los satélites (la misma para todos, sin datos tuyos) y lo que necesita la publicidad de Google.</p>
 
@@ -66,11 +66,11 @@
 
 <h2>Datos que sí salen del teléfono</h2>
 <h3>La previsión de nubes</h3>
-<p>Las nubes las da el Instituto Meteorológico de Noruega (MET Norway), a través de nuestro servidor intermedio en Google Cloud Run (región de Madrid). La aplicación le envía las coordenadas del lugar redondeadas a dos decimales y un identificador de la aplicación; el servidor las redondea a un decimal (unos 11 km), pide a MET Norway la previsión de esa zona y la guarda en memoria unas horas para todos los que estén cerca. Así, MET Norway solo recibe la petición de nuestro servidor, nunca tu dirección IP ni tu lugar exacto. El servidor no guarda ni registra las coordenadas ni las direcciones IP de las peticiones (tampoco en los registros de Google Cloud, desactivados para este servicio). Si tienes los avisos encendidos, la aplicación también pide la previsión en segundo plano, unas dos veces al día, para avisarte solo cuando la noche merezca la pena.</p>
+<p>Las nubes las da el Instituto Meteorológico de Noruega (MET Norway), a través de nuestro servidor intermedio en Google Cloud Run (región de Madrid). La aplicación le envía las coordenadas del lugar redondeadas a un decimal (unos 11 km) y un identificador de la aplicación; el servidor pide a MET Norway la previsión de esa zona y la guarda en memoria unas horas para todos los que estén cerca. Así, MET Norway solo recibe la petición de nuestro servidor, nunca tu dirección IP ni tu lugar exacto. El servidor no guarda ni registra las coordenadas ni las direcciones IP de las peticiones (tampoco en los registros de Google Cloud, desactivados para este servicio). Si tienes los avisos encendidos, la aplicación también pide la previsión en segundo plano, unas dos veces al día, para avisarte solo cuando la noche merezca la pena.</p>
 <h3>Las órbitas de los satélites</h3>
 <p>Para dibujar la Estación Espacial y otros satélites, la aplicación descarga sus elementos orbitales de nuestro servidor intermedio, que los descarga de CelesTrak (celestrak.org) y los reparte. La petición es la misma para todo el mundo: solo indica qué grupo de satélites se quiere, sin el lugar ni ningún dato tuyo. Se hace como mucho cada pocas horas, solo con la aplicación abierta, y se puede desactivar en Más → Satélites. Las posiciones y los pasos se calculan dentro del teléfono.</p>
 <h3>El nombre del lugar y el buscador de ciudades</h3>
-<p>Cuando usas tu ubicación, la aplicación pregunta al propio Android el nombre del sitio que corresponde a esas coordenadas, y el buscador de ciudades envía a Android el texto que escribes. En la mayoría de los teléfonos ese servicio (el geocodificador de Android) lo presta Google, que lo trata según su política de privacidad.</p>
+<p>Cuando usas tu ubicación, la aplicación pregunta al propio Android el nombre del sitio que corresponde a esas coordenadas, redondeadas también a un decimal (unos 11 km), y el buscador de ciudades envía a Android el texto que escribes. En la mayoría de los teléfonos ese servicio (el geocodificador de Android) lo presta Google, que lo trata según su política de privacidad.</p>
 <h3>Lo que compartes tú</h3>
 <p>Al pulsar «Exportar para la IMO», la aplicación prepara un texto con ese conteo (fechas, coordenadas del lugar y meteoros) y abre el menú de compartir de Android: solo sale del teléfono si eliges una aplicación y lo envías. Los botones para ver un sitio en el mapa abren Google Maps con sus coordenadas; desde ese momento rigen las condiciones de Google Maps.</p>
 <h3>Las descripciones de Wikipedia</h3>

@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 26 October 2026</p>
+<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 6 November 2026</p>
 
 <p class="clave"><strong>In one sentence:</strong> this app has no user accounts and works out the sky inside your phone. The only things that leave it are what the cloud forecast needs (the location's coordinates rounded to about one kilometre, which our server does not keep), the request for satellite orbits (the same for everyone, with no data about you) and what Google's advertising needs.</p>
 
@@ -66,11 +66,11 @@
 
 <h2>Data that does leave your phone</h2>
 <h3>The cloud forecast</h3>
-<p>Clouds come from the Norwegian Meteorological Institute (MET Norway), through our intermediate server on Google Cloud Run (Madrid region). The app sends it the location's coordinates rounded to two decimals and an app identifier; the server rounds them to one decimal (about 11 km), requests the forecast for that area from MET Norway and keeps it in memory for a few hours for everyone nearby. So MET Norway only receives our server's request, never your IP address or your exact location. The server does not store or log the coordinates or IP addresses of requests (nor do Google Cloud's logs, which are turned off for this service). If you have alerts turned on, the app also requests the forecast in the background, about twice a day, so it only alerts you when the night is worth it.</p>
+<p>Clouds come from the Norwegian Meteorological Institute (MET Norway), through our intermediate server on Google Cloud Run (Madrid region). The app sends it the location's coordinates rounded to one decimal (about 11 km) and an app identifier; the server requests the forecast for that area from MET Norway and keeps it in memory for a few hours for everyone nearby. So MET Norway only receives our server's request, never your IP address or your exact location. The server does not store or log the coordinates or IP addresses of requests (nor do Google Cloud's logs, which are turned off for this service). If you have alerts turned on, the app also requests the forecast in the background, about twice a day, so it only alerts you when the night is worth it.</p>
 <h3>Satellite orbits</h3>
 <p>To draw the Space Station and other satellites, the app downloads their orbital elements from our intermediate server, which downloads them from CelesTrak (celestrak.org) and shares them. The request is the same for everyone: it only says which group of satellites is wanted, without your location or any data about you. It is made at most every few hours, only while the app is open, and can be turned off in More → Satellites. Positions and passes are worked out inside your phone.</p>
 <h3>Place names and the city search</h3>
-<p>When you use your location, the app asks Android for the name of the place at those coordinates, and the city search sends Android the text you type. On most phones this service (the Android geocoder) is provided by Google, which handles it under its privacy policy.</p>
+<p>When you use your location, the app asks Android for the name of the place at those coordinates, also rounded to one decimal (about 11 km), and the city search sends Android the text you type. On most phones this service (the Android geocoder) is provided by Google, which handles it under its privacy policy.</p>
 <h3>What you share yourself</h3>
 <p>When you tap “Export for the IMO”, the app prepares a text with that count (dates, the place's coordinates and the meteors) and opens Android's share menu: it only leaves the phone if you pick an app and send it. The buttons to see a place on the map open Google Maps with its coordinates; from then on, Google Maps' terms apply.</p>
 <h3>Wikipedia descriptions</h3>

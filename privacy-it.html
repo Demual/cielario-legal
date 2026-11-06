@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Informativa sulla privacy</h1>
-<p class="fecha">Applicazione Cielario (<code>com.jrsoft.mapaestrellas</code>) · Ultimo aggiornamento: 26 ottobre 2026</p>
+<p class="fecha">Applicazione Cielario (<code>com.jrsoft.mapaestrellas</code>) · Ultimo aggiornamento: 6 novembre 2026</p>
 
 <p class="clave"><strong>In una frase:</strong> questa applicazione non prevede account utente e calcola il cielo all'interno del Suo telefono. Ne esce solo lo stretto indispensabile per la previsione delle nuvole (le coordinate del luogo arrotondate a un chilometro, che il nostro server non conserva), la richiesta delle orbite dei satelliti (uguale per tutti, senza Suoi dati) e ciò che serve alla pubblicità di Google.</p>
 
@@ -66,11 +66,11 @@
 
 <h2>Dati che escono dal telefono</h2>
 <h3>La previsione delle nuvole</h3>
-<p>Le nuvole provengono dall'Istituto meteorologico norvegese (MET Norway), tramite il nostro server intermedio su Google Cloud Run (regione di Madrid). L'applicazione gli invia le coordinate del luogo arrotondate a due decimali e un identificativo dell'applicazione; il server le arrotonda a un decimale (circa 11 km), chiede a MET Norway la previsione di quella zona e la conserva in memoria per qualche ora per tutti quelli che si trovano vicino. Così MET Norway riceve solo la richiesta del nostro server, mai il Suo indirizzo IP né il Suo luogo esatto. Il server non conserva né registra le coordinate né gli indirizzi IP delle richieste (nemmeno nei registri di Google Cloud, disattivati per questo servizio). Se ha attivato gli avvisi, l'applicazione chiede la previsione anche in background, circa due volte al giorno, per avvisarLa solo quando la notte ne vale la pena.</p>
+<p>Le nuvole provengono dall'Istituto meteorologico norvegese (MET Norway), tramite il nostro server intermedio su Google Cloud Run (regione di Madrid). L'applicazione gli invia le coordinate del luogo arrotondate a un decimale (circa 11 km) e un identificativo dell'applicazione; il server chiede a MET Norway la previsione di quella zona e la conserva in memoria per qualche ora per tutti quelli che si trovano vicino. Così MET Norway riceve solo la richiesta del nostro server, mai il Suo indirizzo IP né il Suo luogo esatto. Il server non conserva né registra le coordinate né gli indirizzi IP delle richieste (nemmeno nei registri di Google Cloud, disattivati per questo servizio). Se ha attivato gli avvisi, l'applicazione chiede la previsione anche in background, circa due volte al giorno, per avvisarLa solo quando la notte ne vale la pena.</p>
 <h3>Le orbite dei satelliti</h3>
 <p>Per disegnare la Stazione spaziale e altri satelliti, l'applicazione scarica i loro elementi orbitali dal nostro server intermedio, che li scarica da CelesTrak (celestrak.org) e li distribuisce. La richiesta è uguale per tutti: indica solo il gruppo di satelliti desiderato, senza il luogo né alcun dato che La riguardi. Viene fatta al massimo ogni poche ore, solo con l'applicazione aperta, e si può disattivare in Altro → Satelliti. Le posizioni e i passaggi sono calcolati nel telefono.</p>
 <h3>Il nome del luogo e la ricerca delle città</h3>
-<p>Quando usa la Sua posizione, l'applicazione chiede ad Android stesso il nome del luogo corrispondente a quelle coordinate, e la ricerca delle città invia ad Android il testo che digita. Sulla maggior parte dei telefoni questo servizio (il geocoder di Android) è fornito da Google, che lo tratta secondo la propria informativa sulla privacy.</p>
+<p>Quando usa la Sua posizione, l'applicazione chiede ad Android stesso il nome del luogo corrispondente a quelle coordinate, arrotondate anch'esse a un decimale (circa 11 km), e la ricerca delle città invia ad Android il testo che digita. Sulla maggior parte dei telefoni questo servizio (il geocoder di Android) è fornito da Google, che lo tratta secondo la propria informativa sulla privacy.</p>
 <h3>Ciò che condivide Lei</h3>
 <p>Quando tocca «Esporta per l'IMO», l'applicazione prepara un testo con quel conteggio (date, coordinate del luogo e meteore) e apre il menu di condivisione di Android: lascia il telefono solo se sceglie un'applicazione e lo invia. I pulsanti per vedere un luogo sulla mappa aprono Google Maps con le sue coordinate; da quel momento si applicano le condizioni di Google Maps.</p>
 <h3>Le descrizioni di Wikipedia</h3>
