@@ -30,9 +30,9 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 6 November 2026</p>
+<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 9 November 2026</p>
 
-<p class="clave"><strong>In one sentence:</strong> this app has no user accounts and works out the sky inside your phone. The only things that leave it are what the cloud forecast needs (the location's coordinates rounded to about one kilometre, which our server does not keep), the request for satellite orbits (the same for everyone, with no data about you) and what Google's advertising needs.</p>
+<p class="clave"><strong>In one sentence:</strong> this app has no user accounts and works out the sky inside your phone. The only things that leave it are what the cloud forecast needs (the location's coordinates rounded to about 11 km, which our server does not keep), the request for satellite orbits (the same for everyone, with no data about you) and what Google's advertising needs.</p>
 
 <h2>Who is responsible</h2>
 <p>The data controller is JR Soft, the trading name of Javier Román Sáez, the app's developer. You can contact us at <a href="mailto:demual@gmail.com">demual@gmail.com</a>.</p>
@@ -66,11 +66,11 @@
 
 <h2>Data that does leave your phone</h2>
 <h3>The cloud forecast</h3>
-<p>Clouds come from the Norwegian Meteorological Institute (MET Norway), through our intermediate server on Google Cloud Run (Madrid region). The app sends it the location's coordinates rounded to one decimal (about 11 km) and an app identifier; the server requests the forecast for that area from MET Norway and keeps it in memory for a few hours for everyone nearby. So MET Norway only receives our server's request, never your IP address or your exact location. The server does not store or log the coordinates or IP addresses of requests (nor do Google Cloud's logs, which are turned off for this service). If you have alerts turned on, the app also requests the forecast in the background, about twice a day, so it only alerts you when the night is worth it.</p>
+<p>Clouds come from the Norwegian Meteorological Institute (MET Norway), through our intermediate server on Google Cloud Run (Madrid region). The app sends it the location's coordinates rounded to one decimal (about 11 km; up to version 1.0.2, to two decimals, and the server rounds them to one) and an app identifier; the server requests the forecast for that area from MET Norway and keeps it in memory for a few hours for everyone nearby. So MET Norway only receives our server's request, never your IP address or your exact location. The server does not store or log the coordinates or IP addresses of requests (nor do Google Cloud's logs, which are turned off for this service). If you have alerts turned on, the app also requests the forecast in the background, about twice a day, so it only alerts you when the night is worth it.</p>
 <h3>Satellite orbits</h3>
 <p>To draw the Space Station and other satellites, the app downloads their orbital elements from our intermediate server, which downloads them from CelesTrak (celestrak.org) and shares them. The request is the same for everyone: it only says which group of satellites is wanted, without your location or any data about you. It is made at most every few hours, only while the app is open, and can be turned off in More → Satellites. Positions and passes are worked out inside your phone.</p>
 <h3>Place names and the city search</h3>
-<p>When you use your location, the app asks Android for the name of the place at those coordinates, also rounded to one decimal (about 11 km), and the city search sends Android the text you type. On most phones this service (the Android geocoder) is provided by Google, which handles it under its privacy policy.</p>
+<p>When you use your location, the app asks Android for the name of the place at those coordinates, also rounded to one decimal (about 11 km; up to version 1.0.2, to two), and the city search sends Android the text you type. In “Darker skies nearby” it also asks, with the same rounding, for the names of the places it suggests. On most phones this service (the Android geocoder) is provided by Google, which handles it under its privacy policy.</p>
 <h3>What you share yourself</h3>
 <p>When you tap “Export for the IMO”, the app prepares a text with that count (dates, the place's coordinates and the meteors) and opens Android's share menu: it only leaves the phone if you pick an app and send it. The buttons to see a place on the map open Google Maps with its coordinates; from then on, Google Maps' terms apply.</p>
 <h3>Wikipedia descriptions</h3>
@@ -118,7 +118,7 @@
 <p>You can also complain to the <a href="https://www.aepd.es">Spanish Data Protection Agency (AEPD)</a> or to the data protection authority of your country.</p>
 
 <h2>US residents</h2>
-<p>If you live in a US state with its own privacy law (for example, California, Colorado, Connecticut, Texas or Virginia), you have the right to ask that your personal data not be sold or shared for targeted advertising. You can do this in the app: More → “Ad privacy options” → “Don't sell or share my data”. From then on, you will only see non-personalised ads. The app does not sell or share sensitive data: the coordinates of your place (rounded to about one kilometre) are only used to provide the service (the cloud forecast and the place name), as explained above, and our server does not store them. For ads, Google's SDK uses device identifiers and an approximate location (at city level). For any other request about your data, write to us at <a href="mailto:demual@gmail.com">demual@gmail.com</a>.</p>
+<p>If you live in a US state with its own privacy law (for example, California, Colorado, Connecticut, Texas or Virginia), you have the right to ask that your personal data not be sold or shared for targeted advertising. You can do this in the app: More → “Ad privacy options” → “Don't sell or share my data”. From then on, you will only see non-personalised ads. The app does not sell or share sensitive data: the coordinates of your place (rounded to about 11 km) are only used to provide the service (the cloud forecast and the place name), as explained above, and our server does not store them. For ads, Google's SDK uses device identifiers and an approximate location (at city level). For any other request about your data, write to us at <a href="mailto:demual@gmail.com">demual@gmail.com</a>.</p>
 
 <h2>Children</h2>
 <p>This app is not directed at children under 16 and does not knowingly collect their data.</p>
