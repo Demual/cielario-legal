@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Política de privacidade</h1>
-<p class="fecha">Aplicação Cielario (<code>com.jrsoft.mapaestrellas</code>) · Última atualização: 9 de novembro de 2026</p>
+<p class="fecha">Aplicação Cielario (<code>com.jrsoft.mapaestrellas</code>) · Última atualização: 11 de novembro de 2026</p>
 
 <p class="clave"><strong>Numa frase:</strong> esta aplicação não tem contas e calcula o céu dentro do seu telefone. Só sai dele o indispensável para a previsão de nuvens (as coordenadas do local, arredondadas a cerca de 11 km, que o nosso servidor não guarda), o pedido das órbitas dos satélites (igual para todos, sem dados seus) e aquilo de que a publicidade da Google necessita.</p>
 
@@ -41,7 +41,7 @@
 <ul>
   <li>Não há inscrição, conta, login nem senha. Nunca é pedido um e-mail, um número de telefone nem um nome.</li>
   <li>Não há nenhuma ferramenta de análise própria: nem Google Analytics, nem Firebase Analytics, nem relatórios de falhas. A biblioteca de publicidade da Google envia, sim, à Google os seus próprios dados técnicos; quais dados e para quê, mais abaixo.</li>
-  <li>Não vendemos nem alugamos os seus dados. Para mostrar e medir anúncios, o SDK de anúncios da Google (AdMob) recolhe identificadores do dispositivo, como se explica nesta política. Algumas leis de privacidade dos EUA podem considerar isso uma «venda» ou uma «partilha» de dados pessoais (ver «Residentes nos EUA»).</li>
+  <li>A JR Soft não guarda dados pessoais, exceto os e-mails que nos são enviados (o seu servidor intermédio não guarda coordenadas nem endereços IP), e não entrega a ninguém listas ou bases de dados com eles. Para mostrar e medir anúncios, o SDK de anúncios da Google (AdMob) recolhe por conta própria identificadores do dispositivo e outros dados técnicos e envia-os à Google, como se explica nesta política. Algumas leis de privacidade dos EUA consideram que deixar o SDK de um terceiro recolher esses dados para publicidade personalizada é «vender» ou «partilhar» dados pessoais; quem vive lá pode opor-se (ver «Residentes nos EUA»).</li>
   <li>Não é usada a localização exata. Só é pedida a localização aproximada, e apenas se escolher “Usar minha localização aproximada”. A aplicação nunca a pede em segundo plano. Se não a autorizar, é usado o local correspondente ao fuso horário do telefone.</li>
   <li>Não são usados a câmara nem o microfone. Os sensores de orientação (bússola, giroscópio e sensor de aceleração) são lidos dentro do telefone para mover o mapa do céu e não são enviados para fora dele.</li>
   <li>Não há notificações enviadas a partir de um servidor: os alertas de chuvas de meteoros e de eclipses são calculados e programados dentro do telefone.</li>
@@ -104,6 +104,9 @@
   <li><strong>O nosso servidor intermediário:</strong> a previsão de cada zona de 11 km, em memória, até expirar (algumas horas), e as órbitas, cerca de 3 horas. Não guarda coordenadas nem endereços IP. Só regista os seus próprios erros ao comunicar com o MET Norway ou a CelesTrak, sem dados de ninguém, durante 30 dias.</li>
   <li><strong>Google</strong> (publicidade e nome dos locais): segundo os seus próprios prazos, explicados em <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
 </ul>
+
+<h2>Segurança</h2>
+<p>O que a aplicação guarda fica no seu armazenamento privado, ao qual o Android não deixa aceder outras aplicações, e não é enviado para a cópia de segurança na nuvem. Não há contas de utilizador. O servidor intermédio da aplicação, no Google Cloud Run (região de Madrid), pede as nuvens ao MET Norway e as órbitas à CelesTrak e distribui-as: não guarda coordenadas nem endereços IP. As ligações da aplicação e dos SDK da Google são cifradas (HTTPS). As mensagens que nos são enviadas ficam guardadas numa conta de e-mail a que só a JR Soft tem acesso.</p>
 
 <h2>Transferências internacionais</h2>
 <p>A Google LLC, com sede nos Estados Unidos, pode tratar aí os dados da publicidade (AdMob) e do nome dos locais (o geocodificador do Android). A Google LLC aderiu ao Quadro de Privacidade de Dados UE-EUA (EU-U.S. Data Privacy Framework), que a Comissão Europeia declarou adequado em 10 de julho de 2023, e usa ainda cláusulas contratuais-tipo. O nosso servidor intermediário funciona na região de Madrid do Google Cloud. Se abrir um artigo da Wikipédia, o seu navegador liga-se à Fundação Wikimedia, também nos Estados Unidos.</p>

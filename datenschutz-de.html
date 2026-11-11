@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Datenschutzerklärung</h1>
-<p class="fecha">App Cielario (<code>com.jrsoft.mapaestrellas</code>) · Letzte Aktualisierung: 9. November 2026</p>
+<p class="fecha">App Cielario (<code>com.jrsoft.mapaestrellas</code>) · Letzte Aktualisierung: 11. November 2026</p>
 
 <p class="clave"><strong>In einem Satz:</strong> Diese App hat keine Benutzerkonten und berechnet den Himmel auf Ihrem Smartphone. Das Gerät verlässt nur, was für die Wolkenvorhersage unbedingt nötig ist (die Koordinaten des Ortes, auf etwa 11 km gerundet, die unser Server nicht speichert), die Abfrage der Satellitenbahnen (für alle gleich, ohne Daten über Sie) und was die Werbung von Google benötigt.</p>
 
@@ -41,7 +41,7 @@
 <ul>
   <li>Es gibt keine Registrierung, kein Konto, keinen Benutzernamen und kein Passwort. Sie werden nie nach einer E-Mail-Adresse, einer Telefonnummer oder einem Namen gefragt.</li>
   <li>Es gibt kein eigenes Analysewerkzeug: weder Google Analytics noch Firebase Analytics noch Absturzberichte. Die Werbebibliothek von Google sendet allerdings ihre eigenen technischen Daten an Google; welche Daten und wozu, erfahren Sie weiter unten.</li>
-  <li>Wir verkaufen und vermieten Ihre Daten nicht. Um Anzeigen auszuliefern und zu messen, erfasst das Werbe-SDK von Google (AdMob) Gerätekennungen, wie in dieser Datenschutzerklärung erläutert. Einige US-Datenschutzgesetze können das als „Verkauf“ oder „Teilen“ personenbezogener Daten einstufen (siehe „Wohnsitz in den USA“).</li>
+  <li>JR Soft speichert keine personenbezogenen Daten, außer E-Mails, die uns geschickt werden (der Zwischenserver speichert weder Koordinaten noch IP-Adressen), und gibt niemandem Listen oder Datenbanken damit weiter. Um Werbung anzuzeigen und zu messen, erhebt das Werbe-SDK von Google (AdMob) selbst Gerätekennungen und andere technische Daten und sendet sie an Google, wie in dieser Erklärung beschrieben. Manche Datenschutzgesetze in den USA sehen darin, dass das SDK eines Dritten diese Daten für personalisierte Werbung erhebt, einen „Verkauf“ oder eine „Weitergabe“ personenbezogener Daten; wer dort lebt, kann widersprechen (siehe „Wohnsitz in den USA“).</li>
   <li>Der genaue Standort wird nicht verwendet. Es wird nur der ungefähre Standort angefordert, und nur, wenn Sie „Meinen ungefähren Standort verwenden“ wählen. Die App fordert ihn nie im Hintergrund an. Wenn Sie ihn nicht freigeben, wird der Ort der Zeitzone des Smartphones verwendet.</li>
   <li>Kamera und Mikrofon werden nicht verwendet. Die Lagesensoren (Kompass, Gyroskop, Beschleunigungssensor) werden auf dem Smartphone ausgelesen, um die Himmelskarte zu bewegen, und nirgendwohin gesendet.</li>
   <li>Es gibt keine Benachrichtigungen, die von einem Server gesendet werden: Die Benachrichtigungen zu Meteorströmen und Finsternissen werden auf dem Smartphone berechnet und geplant.</li>
@@ -104,6 +104,9 @@
   <li><strong>Unser Zwischenserver:</strong> die Vorhersage für jedes 11-km-Gebiet im Speicher, bis sie abläuft (einige Stunden), und die Satellitenbahnen etwa 3 Stunden. Er speichert keine Koordinaten und keine IP-Adressen. Er protokolliert nur seine eigenen Fehler bei der Verbindung mit MET Norway oder CelesTrak, ohne personenbezogene Daten, 30 Tage lang.</li>
   <li><strong>Google</strong> (Werbung und Ortsnamen): nach eigenen Fristen, erklärt unter <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
 </ul>
+
+<h2>Sicherheit</h2>
+<p>Was die App speichert, liegt in ihrem privaten Speicher, auf den Android anderen Apps keinen Zugriff gibt, und wird nicht in die Cloud-Sicherung hochgeladen. Es gibt keine Benutzerkonten. Der Zwischenserver der App bei Google Cloud Run (Region Madrid) ruft die Wolkenvorhersage bei MET Norway und die Bahndaten bei CelesTrak ab und gibt sie weiter: Er speichert weder Koordinaten noch IP-Adressen. Die Verbindungen der App und der Google-SDKs sind verschlüsselt (HTTPS). E-Mails an uns werden in einem Postfach gespeichert, auf das nur JR Soft zugreift.</p>
 
 <h2>Internationale Datenübermittlungen</h2>
 <p>Google LLC mit Sitz in den USA kann dort Werbedaten (AdMob) und Daten zu Ortsnamen (Android-Geocoder) verarbeiten. Google LLC ist nach dem EU-US-Datenschutzrahmen (EU-U.S. Data Privacy Framework) zertifiziert, den die Europäische Kommission am 10. Juli 2023 als angemessen anerkannt hat, und verwendet zusätzlich Standardvertragsklauseln. Unser Zwischenserver läuft in der Google-Cloud-Region Madrid. Wenn Sie einen Wikipedia-Artikel öffnen, verbindet sich Ihr Browser mit der Wikimedia Foundation, ebenfalls in den USA.</p>

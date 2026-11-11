@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Política de privadesa</h1>
-<p class="fecha">Aplicació Cielario (<code>com.jrsoft.mapaestrellas</code>) · Darrera actualització: 9 de novembre de 2026</p>
+<p class="fecha">Aplicació Cielario (<code>com.jrsoft.mapaestrellas</code>) · Darrera actualització: 11 de novembre de 2026</p>
 
 <p class="clave"><strong>En una frase:</strong> aquesta aplicació no té comptes d'usuari i calcula el cel dins del teu telèfon. Només en surt l'imprescindible per a la previsió de núvols (les coordenades del lloc arrodonides a uns 11 km, que el nostre servidor no guarda), la petició de les òrbites dels satèl·lits (la mateixa per a tothom, sense dades teves) i el que necessita la publicitat de Google.</p>
 
@@ -41,7 +41,7 @@
 <ul>
   <li>No hi ha registre, compte, usuari ni contrasenya. Mai no se't demana un correu, un telèfon ni un nom.</li>
   <li>No hi ha cap eina d'analítica pròpia: ni Google Analytics, ni Firebase Analytics, ni informes d'errors. La biblioteca de publicitat de Google sí que envia a Google les seves pròpies dades tècniques; quines i per a què, més avall.</li>
-  <li>No venem ni lloguem les teves dades. Per mostrar i mesurar anuncis, l'SDK d'anuncis de Google (AdMob) recull identificadors del dispositiu, com s'explica en aquesta política. Algunes lleis de privadesa dels EUA poden considerar això «vendre» o «compartir» dades personals (consulta «Residents als EUA»).</li>
+  <li>JR Soft no guarda les teves dades, excepte els correus que tu ens enviïs (el seu servidor intermedi no guarda coordenades ni adreces IP), i no lliura a ningú llistes ni bases de dades amb elles. Per mostrar i mesurar anuncis, l'SDK d'anuncis de Google (AdMob) recull pel seu compte identificadors del dispositiu i altres dades tècniques i els envia a Google, tal com s'explica en aquesta política. Algunes lleis de privadesa dels EUA consideren que deixar que l'SDK d'un tercer reculli aquestes dades per a publicitat personalitzada és «vendre» o «compartir» dades personals; si hi vius, t'hi pots oposar (consulta «Residents als EUA»).</li>
   <li>No es fa servir la ubicació precisa. Només es demana l'aproximada, i només si tries «Fes servir la meva ubicació aproximada». L'aplicació mai no la demana en segon pla. Sense ella, es fa servir el lloc de la zona horària del telèfon.</li>
   <li>No es fan servir ni la càmera ni el micròfon. Els sensors d'orientació (brúixola, giroscopi, acceleròmetre) es llegeixen dins del telèfon per moure el mapa del cel i no s'envien enlloc.</li>
   <li>No hi ha notificacions enviades des d'un servidor: els avisos de pluges d'estels i d'eclipsis es calculen i es programen dins del telèfon.</li>
@@ -104,6 +104,9 @@
   <li><strong>El nostre servidor intermediari:</strong> la previsió de cada zona d'11 km, a la memòria, fins que caduca (unes hores), i les òrbites, unes 3 hores. No guarda coordenades ni adreces IP. Només registra els seus propis errors en parlar amb MET Norway o CelesTrak, sense dades de ningú, durant 30 dies.</li>
   <li><strong>Google</strong> (publicitat i nom dels llocs): segons els seus propis terminis, explicats a <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
 </ul>
+
+<h2>Seguretat</h2>
+<p>El que guarda l'aplicació és al seu emmagatzematge privat, on Android no deixa entrar altres aplicacions, i no es puja a la còpia de seguretat al núvol. No hi ha comptes d'usuari. El servidor intermedi de l'aplicació, a Google Cloud Run (regió de Madrid), demana els núvols a MET Norway i les òrbites a CelesTrak i les reparteix: no guarda coordenades ni adreces IP. Les connexions de l'aplicació i dels SDK de Google van xifrades (HTTPS). Si ens escrius, el teu missatge es guarda en un compte de correu al qual només accedeix JR Soft.</p>
 
 <h2>Transferències internacionals</h2>
 <p>Google LLC, amb seu als Estats Units, pot tractar-hi les dades de la publicitat (AdMob) i del nom dels llocs (el geocodificador d'Android). Google LLC està adherida al Marc de Privadesa de Dades UE-EUA (EU-U.S. Data Privacy Framework), que la Comissió Europea va declarar adequat el 10 de juliol de 2023, i fa servir a més clàusules contractuals tipus. El nostre servidor intermediari funciona a la regió de Madrid de Google Cloud. Si obres un article de la Viquipèdia, el teu navegador es connecta amb la Fundació Wikimedia, també als Estats Units.</p>

@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 9 November 2026</p>
+<p class="fecha">Cielario app (<code>com.jrsoft.mapaestrellas</code>) · Last updated: 11 November 2026</p>
 
 <p class="clave"><strong>In one sentence:</strong> this app has no user accounts and works out the sky inside your phone. The only things that leave it are what the cloud forecast needs (the location's coordinates rounded to about 11 km, which our server does not keep), the request for satellite orbits (the same for everyone, with no data about you) and what Google's advertising needs.</p>
 
@@ -41,7 +41,7 @@
 <ul>
   <li>There is no sign-up, account, username or password. You are never asked for an email, phone number or name.</li>
   <li>There are no analytics tools of our own: no Google Analytics, no Firebase Analytics, no crash reports. Google's advertising library does send its own technical data to Google; what and why is explained below.</li>
-  <li>We do not sell or rent your data. To show and measure ads, Google's advertising SDK (AdMob) collects device identifiers, as explained in this policy. Some US privacy laws may treat that as “selling” or “sharing” personal data (see “US residents”).</li>
+  <li>JR Soft does not keep your data, except the emails you send us (its intermediate server keeps no coordinates or IP addresses), and does not hand lists or databases of it to anyone. To show and measure ads, Google's advertising SDK (AdMob) collects device identifiers and other technical data on its own and sends them to Google, as explained in this policy. Some U.S. privacy laws consider that letting a third party's SDK collect that data for personalised advertising is “selling” or “sharing” personal information; if you live there, you can opt out (see “US residents”).</li>
   <li>Precise location is not used. Only approximate location is requested, and only if you choose "Use my approximate location". The app never requests it in the background. Without it, the place of your phone's time zone is used.</li>
   <li>The camera and microphone are not used. Orientation sensors (compass, gyroscope, accelerometer) are read inside the phone to move the sky map and are not sent anywhere.</li>
   <li>No notifications are sent from a server: meteor shower and eclipse alerts are calculated and scheduled inside the phone.</li>
@@ -104,6 +104,9 @@
   <li><strong>Our intermediate server:</strong> the forecast for each 11 km area, in memory, until it expires (a few hours), and satellite orbits for about 3 hours. It does not keep coordinates or IP addresses. It only logs its own errors when talking to MET Norway or CelesTrak, with no data about anyone, for 30 days.</li>
   <li><strong>Google</strong> (advertising and place names): according to its own retention periods, explained at <a href="https://policies.google.com/technologies/retention">policies.google.com/technologies/retention</a>.</li>
 </ul>
+
+<h2>Security</h2>
+<p>What the app stores is kept in its private storage, which Android does not let other apps access, and it is not uploaded to the cloud backup. There are no user accounts. The app's intermediate server, on Google Cloud Run (Madrid region), fetches cloud forecasts from MET Norway and orbits from CelesTrak and passes them on: it keeps no coordinates or IP addresses. The connections made by the app and by Google's SDKs are encrypted (HTTPS). If you write to us, your message is kept in an email account that only JR Soft can access.</p>
 
 <h2>International transfers</h2>
 <p>Google LLC, based in the United States, may process advertising data (AdMob) and place-name data (the Android geocoder) there. Google LLC participates in the EU-U.S. Data Privacy Framework, which the European Commission found adequate on 10 July 2023, and also uses standard contractual clauses. Our intermediate server runs in Google Cloud's Madrid region. If you open a Wikipedia article, your browser connects to the Wikimedia Foundation, also in the United States.</p>
