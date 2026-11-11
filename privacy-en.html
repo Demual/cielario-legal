@@ -56,6 +56,7 @@
   <li>The downloaded satellite orbits, so they aren't requested again for a few hours.</li>
   <li>The nights you count with the meteor counter (times, place, conditions and each meteor), until you delete them.</li>
   <li>What the home-screen widget shows: the dates of the next meteor showers and eclipses, already calculated.</li>
+  <li>The counters that decide when to suggest you rate the app: how many times you have opened it, how many times you have gone to something with the sky search or opened a meteor shower with the best forecast, and the date it was last suggested. It is never suggested with the red night mode on.</li>
   <li>The country of your SIM card (or, if there is none, that of the system region), which the “More apps by JR Soft” screen checks at that moment to show only the apps available in your country. It is neither stored nor sent. The Google Play links on that screen carry a tag saying they come from Cielario, without any data about you.</li>
 </ul>
 <p><strong>Backups and switching phones.</strong> Android's cloud backup (the one in your Google account) is turned off for this app's data: none of it is uploaded. Android does keep a list of the apps you had installed in your account so it can reinstall them, but Google manages that list and it contains no data from this app.</p>
@@ -76,13 +77,15 @@
 <h3>Wikipedia descriptions</h3>
 <p>The descriptions of stars, planets and other objects come inside the app (text adapted from Wikipedia, under a CC BY-SA 4.0 licence): reading them sends nothing. Only if you tap “More on Wikipedia” does the article open in your browser; from then on Wikipedia (the Wikimedia Foundation) receives your IP address, like any website you visit, and its privacy policy applies.</p>
 <h3>IP address</h3>
-<p>As with any app that connects to the internet, the servers it talks to receive your IP address: our intermediate server (clouds and satellites), which does not keep it, and Google (place names, advertising and, if configured, remote configuration). Google may use it to estimate an approximate location, at the level of a city or region, to select and measure ads and prevent fraud.</p>
+<p>As with any app that connects to the internet, the servers it talks to receive your IP address: our intermediate server (clouds and satellites), which does not keep it, and Google (place names, advertising, ratings and, if configured, remote configuration). Google may use it to estimate an approximate location, at the level of a city or region, to select and measure ads and prevent fraud.</p>
 <h3>Advertising: Google AdMob</h3>
 <p>The app includes Google's advertising SDK (AdMob) and therefore declares the <code>com.google.android.gms.permission.AD_ID</code> permission, which gives access to Android's advertising ID. You can reset or delete this ID in Android Settings → Google → Ads.</p>
 <p>Besides the advertising ID, the AdMob SDK collects the app set ID, interactions with the app and with ads, and diagnostic data (launch time, crashes and energy use). Google uses them to serve and measure ads, for analytics and to prevent fraud, under its own policy.</p>
 <p>In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's consent form (UMP) before serving personalised ads. You can change your choice at any time in More → Ad privacy options. If you decline, you'll see non-personalised ads and the app works exactly the same. Ad requests do not carry your location or anything you look at in the sky. With the red night mode on, no ads are requested at all.</p>
 <p>The ad consent message is shown by Google with wording shared by all its advertising partners, which is why it mentions precise geolocation. According to Google, its ads SDK only uses the approximate location inferred from the IP address, and this app does not pass it the GPS location. You can refuse that use under “Manage options”.</p>
 
+<h3>Rating the app: Google Play</h3>
+<p>If you tap “Rate the app”, or Google Play suggests rating it, the rating happens in a Google Play window, with your account and under Google’s terms. The app neither sees nor stores the stars or what you write.</p>
 <h2>Third parties involved</h2>
 <table>
   <tr><th>Service</th><th>Purpose</th><th>Their policy</th></tr>
@@ -93,6 +96,7 @@
   <tr><td>Google AdMob</td><td>Advertising and consent form</td><td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td></tr>
   <tr><td>Google Firebase Remote Config</td><td>Adjusting ad slots without publishing a new version (optional)</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
   <tr><td>Wikipedia (Wikimedia Foundation)</td><td>The full article, only if you open it</td><td><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></td></tr>
+  <tr><td>Google Play</td><td>Asking for and collecting your rating of the app, if you give one</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 </table>
 <p>The cloud forecast is from MET Norway and is published under a CC BY 4.0 licence. This app is not affiliated with MET Norway.</p>
 

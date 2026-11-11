@@ -56,6 +56,7 @@
   <li>Les orbites des satellites téléchargées, pour ne pas les redemander pendant quelques heures.</li>
   <li>Les nuits que vous comptez avec le compteur de météores (horaires, lieu, conditions et chaque météore), jusqu'à ce que vous les supprimiez.</li>
   <li>Ce qu'affiche le widget de l'écran d'accueil : les dates des prochaines pluies d'étoiles filantes et éclipses, déjà calculées.</li>
+  <li>Les compteurs qui décident quand vous proposer de noter l'application : combien de fois vous l'avez ouverte, combien de fois vous êtes allé à un objet avec la recherche du ciel ou avez ouvert une pluie d'étoiles filantes avec la meilleure prévision, et la date de la dernière proposition. Avec le mode nuit rouge activé, elle n'est jamais proposée.</li>
   <li>Le pays de votre carte SIM (ou, à défaut, celui de la région du système), que l'écran « Plus d'applis de JR Soft » consulte sur le moment pour n'afficher que les applications disponibles dans votre pays. Il n'est ni enregistré ni envoyé. Les liens vers Google Play de cet écran portent une étiquette indiquant qu'ils viennent de Cielario, sans aucune donnée vous concernant.</li>
 </ul>
 <p><strong>Sauvegardes et changement de téléphone.</strong> La sauvegarde d'Android dans le cloud (celle de votre compte Google) est désactivée pour les données de cette application : aucune n'y est envoyée. Android enregistre bien dans votre compte la liste des applications que vous aviez installées, pour pouvoir les réinstaller, mais cette liste est gérée par Google et ne contient aucune donnée de l'application.</p>
@@ -76,13 +77,15 @@
 <h3>Les descriptions de Wikipédia</h3>
 <p>Les descriptions des étoiles, des planètes et des autres objets sont incluses dans l'application (texte adapté de Wikipédia, sous licence CC BY-SA 4.0) : les lire n'envoie rien. Ce n'est que si vous touchez « En savoir plus sur Wikipédia » que l'article s'ouvre dans votre navigateur ; dès lors, Wikipédia (Fondation Wikimedia) reçoit votre adresse IP, comme tout site que vous visitez, et sa politique de confidentialité s'applique.</p>
 <h3>Adresse IP</h3>
-<p>Comme toute application qui se connecte à internet, les serveurs avec lesquels elle communique reçoivent votre adresse IP : notre serveur intermédiaire (les nuages et les satellites), qui ne la conserve pas, et Google (le nom des lieux, la publicité et, si elle est configurée, la configuration à distance). Google peut l'utiliser pour estimer une position approximative, à l'échelle d'une ville ou d'une région, afin de choisir et de mesurer les annonces et de prévenir la fraude.</p>
+<p>Comme toute application qui se connecte à internet, les serveurs avec lesquels elle communique reçoivent votre adresse IP : notre serveur intermédiaire (les nuages et les satellites), qui ne la conserve pas, et Google (le nom des lieux, la publicité, les notes et, si elle est configurée, la configuration à distance). Google peut l'utiliser pour estimer une position approximative, à l'échelle d'une ville ou d'une région, afin de choisir et de mesurer les annonces et de prévenir la fraude.</p>
 <h3>Publicité : Google AdMob</h3>
 <p>L'application intègre le SDK publicitaire de Google (AdMob) et déclare donc l'autorisation <code>com.google.android.gms.permission.AD_ID</code>, qui donne accès à l'identifiant publicitaire d'Android. Cet identifiant peut être réinitialisé ou supprimé depuis Paramètres Android → Google → Annonces.</p>
 <p>Outre l'identifiant publicitaire, le SDK AdMob collecte l'identifiant de groupe d'applications (app set ID), les interactions avec l'application et avec les annonces, ainsi que des données de diagnostic (temps de démarrage, plantages et consommation d'énergie). Google les utilise pour diffuser et mesurer la publicité, à des fins statistiques et pour prévenir la fraude, conformément à sa propre politique.</p>
 <p>Dans l'Espace économique européen, au Royaume-Uni et en Suisse, l'application affiche le formulaire de consentement de Google (UMP) avant de diffuser de la publicité personnalisée. Vous pouvez modifier votre choix à tout moment depuis Plus → Options de confidentialité des annonces. Si vous refusez la publicité personnalisée, vous verrez de la publicité non personnalisée et l'application fonctionnera exactement de la même façon. Les demandes d'annonces ne contiennent ni votre lieu ni rien de ce que vous regardez dans le ciel. Lorsque le mode nuit rouge est activé, aucune annonce n'est demandée.</p>
 <p>Le message de consentement aux annonces est affiché par Google avec un texte commun à tous ses partenaires publicitaires, c'est pourquoi il mentionne la géolocalisation précise. Selon Google, son SDK publicitaire n'utilise que la localisation approximative déduite de l'adresse IP, et cette application ne lui transmet pas la position GPS. Vous pouvez refuser cet usage dans « Gérer les options ».</p>
 
+<h3>Noter l'appli : Google Play</h3>
+<p>Si vous touchez « Noter l'appli », ou si Google Play vous propose de la noter, la note se donne dans une fenêtre de Google Play, avec votre compte et selon les conditions de Google. L'application ne voit ni n'enregistre la note ni ce que vous écrivez.</p>
 <h2>Tiers concernés</h2>
 <table>
   <tr><th>Service</th><th>Finalité</th><th>Sa politique</th></tr>
@@ -93,6 +96,7 @@
   <tr><td>Google AdMob</td><td>Publicité et formulaire de consentement</td><td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td></tr>
   <tr><td>Google Firebase Remote Config</td><td>Ajuster les emplacements publicitaires sans publier de nouvelle version (facultatif)</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
   <tr><td>Wikipédia (Fondation Wikimedia)</td><td>L'article complet, seulement si vous l'ouvrez</td><td><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></td></tr>
+  <tr><td>Google Play</td><td>Demander et recueillir votre note de l'application, si vous en donnez une</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 </table>
 <p>La prévision des nuages provient de MET Norway et est publiée sous licence CC BY 4.0. Cette application n'est pas affiliée à MET Norway.</p>
 
